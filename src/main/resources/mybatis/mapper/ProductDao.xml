@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mabatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ezen.burger.dao.IProductDao">
+	
+	<select id="getKindList" resultType="com.ezen.burger.dto.ProductVO">
+		Select * from B_product where kind=#{param1}
+	</select>	
+	
+	<select id="getProduct" resultType="com.ezen.burger.dto.ProductVO">
+		Select * from B_product where pseq=#{param1}
+	</select>
+
+
+</mapper>

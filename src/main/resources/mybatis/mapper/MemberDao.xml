@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ezen.burger.dao.IMemberDao">
+	
+	<select id = "findid" resultType="com.ezen.burger.dto.MemberVO">
+		select * from b_member where name=#{param1} and phone=#{param2}
+	</select>
+
+	<insert id = "insertMember" parameterType="com.ezen.burger.dto.MemberVO">
+		insert into B_member(id, pwd, name, email, phone)
+	    values(#{id}, #{pwd}, #{name}, #{email}, #{phone})
+	</insert>
+	
+	<select id = "getMember" resultType="com.ezen.burger.dto.MemberVO">
+		select * from B_member where id=#{param1}
+	</select>
+
+
+</mapper>

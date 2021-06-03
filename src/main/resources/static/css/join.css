@@ -1,0 +1,220 @@
+@charset "UTF-8";
+		body, html{
+        height :100%;
+        margin:0;
+        padding:0;
+     }  
+        /*location*/
+        #first{
+        	position: relative; 
+        	width:100%;  
+        	height:50px; 
+			background:black;
+		}			 
+	    #first_view{
+	    	position: relative; 
+	    	width:1100px; 
+	    	height:50px; 
+	        margin: 0 auto;
+	        line-height: 40px;
+	        color:white; 
+	        font-weight:bold; 
+	        font-size:110%;
+	    }
+	    #first_view>a{
+	    	color:white; 
+	    	font-weight:bold; 
+	    	font-size:110%;
+	    	cursor:pointer;
+	    }  
+	    
+	    
+	    /*join   */
+	   div{
+	   		display: block;
+	   } 
+	   .main_Wrap{
+    		min-height: 450px;
+    		margin: 0 auto;
+    		height:100% /* 전제화면 크기 수정 */
+		}
+		
+		.joinWrap{
+    		padding: 0;
+    		background: white;
+    	}
+    	.joinWrap>.webContainer {
+    		background: none;
+		}
+		.loginWrap>.webContainer {
+			padding: 50px 20px 0;
+		}
+		.webContainer{
+			max-width:1184px;
+			margin: 0 auto;
+		}	
+		.intro{
+			background: white;
+		}
+		.main_join{
+    		min-height: 560px;
+    		padding: 45px 0 70px;
+    		overflow: hidden;
+		}
+		 .title_img img{
+            vertical-align: middle;
+        }
+		.joinWrap .main_join>*{
+			min-height: 355px; 
+			padding-top: 35px;
+		}
+		.main_join>*{
+			float: left;
+			box-sizing:border-box;
+		}
+		.main_join .join{
+			width: 50%;
+			min-width:530px;
+			padding-right: 5%;
+		}
+		
+		.joinWrap .main_join .join .login_btn{
+		    margin-top: 0;
+		    padding: 0 4% 0 44px;
+		}
+		.loginWrap .join .login_btn{
+		    margin: 30px 0;
+		    text-align: left;
+		}
+		.login_btn{
+			overflow:hidden;
+		}
+    	.joinWrap .main_join .join .login_btn a {
+		    width: 100%;
+		}
+		.loginWrap .join .login_btn a {
+		    float: left;
+		    width: 216px;
+		}
+		
+		.btn.btn01 {
+		    height: 72px;
+		    line-height: 32px;
+		    text-align: center;
+		    border-radius: 8px;
+		}
+		.btn:only-child {
+		    width: 100%;
+		    max-width: 450px;
+		}
+		.btn {
+		    display: inline-block;
+		    padding: 20px 10px;
+		    text-align: center;
+		    line-height: 44px;
+		    font-weight: 700;
+		    font-size: 1.625rem;
+		    color: white;
+		    background: #e22219 url('/image/Mimage/bg_btn_pattern.png') repeat-x 0 0;
+		    background-size: auto 100%;
+		}
+    	a{
+    	    margin: 0;
+		    color: white;
+		    text-decoration: none;
+		    outline: none;
+		    cursor: pointer;
+		}
+		a, div, li{
+	   		box-sizing:border-box;
+	   }
+	   strong {
+		    font-weight: bold;
+		}
+	   em{
+	   		color:red;
+	   	}	
+	   
+	   p {
+		    display: block;
+		    margin-block-start: 1em;
+		    margin-block-end: 1em;
+		}
+	   /* 간편로그인 */
+	   
+	    .simple_form{
+            float: left; 
+            width: 45%; 
+            padding:10px;
+	        max-width: 485%;
+	        padding-left: 8.74%;
+	        border-left: 1px solid lightgray;
+        }
+        
+    .simple_form .list {
+        max-width: 338px;
+        margin: 15px 0 20px 46px;
+    }
+    .simple_form .list li:first-child {
+    	background: none;
+    }
+    .simple_form .list li {
+    	margin-bottom: 12px;
+    }
+    li {list-style: none; 
+    	text-decoration:none;}
+    	
+    .simple_form .list .naver a {
+        position: relative;
+        display: block;
+        height: 64px;
+        padding: 5px 5px 5px 70px;
+        font-size: 1.25rem;
+        color: hsla(0,0%,100%,.8);
+        line-height: 65px;
+        text-align: center;
+        background: #1ec800 url('/image/Mimage/logo_naver.gif') no-repeat 21px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 16%);
+        box-shadow: 0 2px 4px rgb(0 0 0 / 16%);
+    }
+    
+    .simple_form .list .kakao a {
+        position: relative;
+        display: block;
+        height: 64px;
+        padding: 5px 5px 5px 70px;
+        font-size: 1.25rem;
+        color: #3c1e20;
+        line-height: 65px;
+        text-align: center;
+        background: #ffeb00 url('/image/Mimage/logo_kakao.gif')  no-repeat 21px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 16%);
+        box-shadow: 0 2px 4px rgb(0 0 0 / 16%);}
+    
+    .simple_form .list .apple a {
+        position: relative;
+        display: block;
+        height: 64px;
+        padding: 5px 5px 5px 70px;
+        font-size: 1.25rem;
+        color: #fff;
+        text-align: center;
+        line-height: 65px;
+        background: #000 url('/image/Mimage/logo_apple.gif')  no-repeat 21px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 16%);
+        box-shadow: 0 2px 4px rgb(0 0 0 / 16%);}
+	   
+	   h2{
+	   	color : black;
+	   	font-size: 2.5rem;
+	   }
+	   
+	   strong {
+		  font-weight: bold;
+		}
+		em {
+		  color: #e22219;
+		}

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+.tab{
+    width:80%;
+    height:auto;
+    overflow:hidden;
+    margin: 0 auto;
+}
+ 
+.tab ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+    width:1149px;
+    height:auto;
+    overflow:hidden; 
+}
+ 
+.tab ul li{
+    display:inline-block;
+    width:19.9%;
+    float:left;
+    line-height:40px;
+    text-align:center;
+    cursor:pointer;
+}
+ 
+.tab ul li:hover,
+.tab ul li.on{
+    background:#FFF;
+    border: 1px solid black;
+}
+ 
+.tab .conBox{
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    min-height:200px;
+    background:#FFF;
+    display:none;
+    text-align:center;
+}
+ 
+.tab .conBox.on{
+    display:block;
+}
+.Brand5{
+    float: left;
+    margin: 0 auto;
+    text-align: left;
+    height: 450px;
+}

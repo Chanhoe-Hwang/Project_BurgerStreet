@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+	.tab{
+	width:80%;
+	height:auto;
+	overflow:hidden;
+	margin: 0 auto;
+	}
+ 
+    .tab ul{
+    padding:0;
+    margin:0 auto; 
+    list-style:none; 
+    width:76%; 
+    height:auto; 
+    overflow:hidden; 
+    }
+ 
+    .tab ul li{ 
+    display:inline-block; 
+    width:49%; 
+    float:left; 
+    line-height:50px; 
+    text-align:center; 
+    cursor:pointer; 
+    height: 50px;
+    font-size: 30px; 
+    }
+    
+    .tab ul li:hover
+    {
+    background:#FFF; 
+    }
+    .tab ul li.on{
+    border: 2px solid black;
+    border-bottom: 0px;
+    }
+    
+    .tab .conBox{
+    width:100%; 
+    height:auto; 
+    overflow:hidden; 
+    min-height:200px; 
+    background:#FFF; 
+    display:none;
+    text-align:center;
+    margin : 0 auto;
+    }
+    
+    .tab .conBox.on{ 
+    display:block;
+    }
+    
+    
+    .Brand1{
+    width: 50%; 
+    height: 330px; 
+    text-align: left; 
+    line-height: 50px; 
+    float: left; 
+    font-weight: bold; 
+    font-size: 25px;
+    }
+    
+    #bunmain1{width: 100%; height: 600px; }
+    #bun1-1{position: relative; float: left;  width: 100px; height: 600px;}
+    #bun1-2{position: relative; float: left;  width: 50%; height: 600px;}
+    
+    #bunmain2{width: 100%; height: 400px;  background: beige;}
+    #bun2-1{ width: 100px; height: 400px; float: right;}
+    #bun2-2{ width: 50%; height: 400px; float: right;}
+    
+    #bunmain3{width: 100%; height: 250px; }
+    #bun3-1{ width: 100px; height: 250px; float: left;}
+    #bun3-2{ width: 50%; height: 250px; float: left;}

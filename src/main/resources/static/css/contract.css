@@ -1,0 +1,179 @@
+@charset "UTF-8";
+   
+     body, html{
+        height :100%;
+        margin:0;
+        padding:0;
+     }  
+    .main_wrap1{
+        background: #f2ebe6;
+        width: 100%;
+        height: 100%; /* 전제화면 크기 수정 */
+    }
+        /*location*/
+    #first{
+        position: relative; 
+        width:100%;  
+        height:50px; 
+        background:black;
+    }				 
+	#first_view{
+        position: relative; 
+	    width:1100px; 
+	    height:50px; 
+	    margin: 0 auto;
+	    line-height: 40px;
+	    color:white; 
+	    font-weight:bold; 
+	    font-size:110%;
+    }
+    #first_view>a{
+	    color:white; 
+	    font-weight:bold; 
+	    font-size:110%;
+	    cursor:pointer;
+        text-decoration: none; /* 수정 */
+    }  
+    
+    .first .first_view> a{
+    	text-decoration:none;
+    }
+    .contractWrap{
+        background: #f2ebe6;
+        max-width: 1184px; 
+        padding: 0 20px;
+        margin: 0 auto;
+       
+    }
+    .contractWrap>.webContainer{
+        background: #f2ebe6;
+    }
+    .webContainer{
+        max-width: 1184px; 
+        padding: 0 20px; 
+        margin: 0 auto;
+    }
+    .join{
+        font-weight: bold;
+        padding: 13px 0 0;
+    }
+    .join_title{
+    	padding-left: 15px;
+    }
+    .title_img img{
+        vertical-align: middle;
+    }
+    
+    .contractJoin{
+        background: white;
+        font-size: 1.375rem;
+    }
+    .agreement{
+        font-size: 1.375rem;
+        margin: 0;
+        height: 50px;
+    }
+    .box1{
+        background: #f8f8f8;
+        font-size: 1.375rem;
+        height: 80px;
+        line-height: 80px;
+        padding: 0 30px;
+    }
+    .box2{
+    	padding-left:8px;
+    }
+    .box3{
+        border-top: 1px dotted lightgray;
+        padding: 20px 0 20px 11px;   /* 수정 */
+    }
+    .checkbox > button{
+        margin: 5px 0; 
+    }
+    button{
+        background: white;
+        font-size: 1rem;
+    	font-weight:bold;
+    	position: absolute;
+    	outline: none;
+    	border-top: 0;
+    	border-left: 0;
+    	border-right: 0;
+    	right: 5px;
+    	top: 0
+    } 
+   
+    .verify{
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+        background: white;
+    }
+   	.verify_btn{
+        display: inline-block;
+        position:static;
+        display: flex;
+        align-items: center;
+   		background: #f2ebe6 url('/image/Mimage/button_background.png') no-repeat 50%;   /* 수정 */
+        width: 256px;
+        height: 80px;
+        line-height: 50px;
+        padding: 12px 10px 10px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor:pointer;
+        margin: 0 auto;
+        padding: 0 80px;
+        overflow: hidden;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        background-size: 100% 100%;
+        border-radius: 0;
+    	border: 0;
+    	outline:none; /* 수정 */
+    }
+    .p_verify{
+        background: #f2ebe6;
+	    margin-top: 40px;
+	    padding: 30px 0 40px;
+    }
+    pp{
+        font-size: 0.7em;
+        color: gray;
+        margin: 3px 0 0; 
+        padding: 0px 35px;
+    }
+    
+   /*  체크박스 */
+   	 	input[type=checkbox]{ 
+            position: absolute;
+		    margin: 10px 6px;  /* 수정 */
+		    vertical-align: middle;
+		    font-size: 1em;
+		    border: none;
+            border-radius: 0; 
+            opacity: 0;
+        }
+     	input[type=checkbox]+:before{
+        	content: "";
+		    display: inline-block;
+		    width: 25px;
+		    height: 25px;
+		    margin-right: 13px;
+		    vertical-align: middle;
+		}
+        input[type=checkbox]+:before{ 
+        	background: url('/image/Mimage/checkbox.png') no-repeat 0;
+        }
+        input[type=checkbox]:checked+:before { 
+		    background-image: url('/image/Mimage/checkbox_black.png');
+		}
+        input[type=checkbox]:checked+* { 
+		    color: black;
+		}
+        .checkbox{
+    	    position: relative;
+            padding: 3px;
+            margin: 8px 0;
+        }

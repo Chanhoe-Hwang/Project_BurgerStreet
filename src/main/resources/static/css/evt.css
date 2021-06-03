@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.tab{
+    width:80%;
+    height:auto;
+    overflow:hidden;
+    margin: 0 auto;
+}
+ 
+.tab ul{
+    padding:0;
+    margin:0 auto;
+    list-style:none;
+    width:80%;
+    height:auto;
+    overflow:hidden;
+    
+}
+ 
+.tab ul li{
+    display:inline-block;
+    width:49.8%;
+    float:left;
+    line-height:40px;
+    text-align:center;
+    cursor:pointer;
+}
+ 
+.tab ul li:hover,
+.tab ul li.on{
+    background:#FFF;
+    border: 1px solid black;
+}
+ 
+.tab .conBox{
+    width:80%;
+    height:auto;
+    overflow:hidden;
+    min-height:200px;
+    background:#FFF;
+    display:none;
+    text-align:center;
+    margin: 0 auto;
+}
+ 
+.tab .conBox.on{
+    display:block;
+}
+.evt{
+    float: left;
+    width: 50%;
+    margin: 0 auto;
+}

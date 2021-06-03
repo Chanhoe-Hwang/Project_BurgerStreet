@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.ezen.burger.dao.IAdminDao">
+	
+	<select id="listProduct" resultType="com.ezen.burger.dto.ProductVO">
+		select * from ( 
+		select * from(
+		select rownum as rn, p.* from 
+		(    (select * from b_product where name like '%'||#{param2}||'%' 
+			order by pseq desc) p  	)
+		) where rn &gt;= #{param1.startNum} 
+		) where rn &lt;= #{param1.endNum} 
+	</select>
+	
+	<select id="getAllCount" resultType="_int">
+		select count(*) from ${param1} where ${param2} like '%'||#{param3}||'%'
+	</select>
+	
+	
+	<update id="updateBoard">
+		update B_board set reply=#{reply}, rep='2' where num=#{num}
+	</update>
+	
+	<update id="updateOrderResult">
+		update b_order_detail set result='2' where odseq=#{param1}
+	</update>
+	
+	<update id="updateProduct">
+		update b_product set kind=#{param1.kind}, name=#{param1.name}, price=#{param1.price}, 
+		content=#{param1.content}, image=#{param1.image}, image_detail=#{param1.image_detail}
+		where pseq=#{param1.pseq}
+	</update>
+
+	<insert id="insertProduct">
+		insert into b_product (pseq, kind, name, price, content, image, image_detail)
+		values(B_product_seq.nextval, #{param1.kind}, #{param1.name}, #{param1.price}, #{param1.content},
+		#{param1.image}, #{param1.image_detail})
+	</insert>
+	
+	<select id="listBoard" resultType="com.ezen.burger.dto.BoardVO">
+		select * from ( 
+		select * from(
+		select rownum as rn, m.* from 
+		(    (select * from B_board where title like '%'||#{param2}||'%' 	order by writedate desc) m 	)
+		) where rn &gt;= #{param1.startNum} 
+		) where rn &lt;= #{param1.endNum} 
+	</select>
+	
+	<select id="listOrder" resultType="com.ezen.burger.dto.OrderVO">
+		select * from ( 
+		select * from(
+		select rownum as rn, o.* from 
+		(    (select * from B_order_view where mname like '%'||#{param2}||'%' 	order by odseq desc) o 	)
+		) where rn &gt;= #{param1.startNum} 
+		) where rn &lt;= #{param1.endNum} 
+	</select>
+	
+</mapper>

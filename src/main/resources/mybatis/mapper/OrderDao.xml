@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mabatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.ezen.burger.dao.IOrderDao">
+
+	<insert id="insertOrders">
+		insert into B_orders(oseq, id) values(B_orders_seq.nextVal, #{param1} )
+	</insert>
+
+	<select id="LookupMaxOseq" resultType="_int">
+		select max(oseq) from B_orders 
+	</select>
+
+	<update id="updateCart">
+		update B_cart set result='2' where cseq=#{param1} 
+	</update>
+
+	<insert id="insertOrderDetail">
+		insert into B_order_detail(odseq, oseq, pseq, quantity, addr1, addr2, contactnum, comments, cashyn)
+		values(B_order_detail_seq.nextval, #{param2}, #{param1.pseq}, #{param1.quantity}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7}) 
+	</insert>
+
+	<select id="listOrderByIdOseq" resultType="com.ezen.burger.dto.OrderVO">
+		select * from B_order_view where id=#{param1} and result=#{param2} and oseq=#{param3}
+	</select>
+	
+</mapper>
